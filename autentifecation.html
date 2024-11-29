@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+   <form method="post" action="<? echo $arResult['FORM_ACTION'] ?>" class="modal self-center registration">
+      <img class="form_logo mt-60" src="/img/main_logo_white.png" alt="Forimex Logo">
+      <h1 class="text-align-center mt-20">Подтвердите почту</h1>
+      <input type="text" name="<? echo $arParams['LOGIN'] ?>" maxlength="50" value="
+      <? echo $arResult['LOGIN'] ?>" size="17" hidden="hidden" />
+      <p class="text-align-center">На адрес вашей электронной почты
+         <? echo $arResult["LOGIN"] ?> отправлено письмо с проверочным кодом.
+      </p>
+      <p class="text-align-center mt--15 p-horizon-60">Введите проверочный код в поле ниже и нажмите продолжить.</p>
+      <div class="code-inputs p-15">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+         <input type="text" maxlength="1" onin put="moveFocus(this, 'next')" name="otp_code">
+      </div>
+      <div class="p-15">
+         <button type="submit" class="submit-btn">Продолжить</button>
+      </div>
+      <a class="back-link mb-60" oncl ick="<? LocalRedirect('/auth/registration.php') ?>">Назад</a>
+      <input type="hidden" name="<? echo $arParams['USER_ID'] ?>" value="
+      <? echo $arResult['USER_ID'] ?>" />
+   </form>
+</body>
+
+</html>

@@ -4,7 +4,7 @@
 *::after {
     box-sizing: border-box;
     margin: 0;
-    padding: 0;
+    padding: 2px;
     font-family: "Franklin Gothic Book";
 }
 
@@ -182,6 +182,10 @@ p {
 
 .text-align-center {
     text-align: center;
+
+    @media (max-width: 500px) {
+        font-size: 3.5vw;
+    }
 }
 
 .align-center {
@@ -723,7 +727,16 @@ p {
 }
 
 .form_logo {
-    height: 0.9vw
+    height: 0.9vw;
+
+    @media (max-width: 500px) {
+        width: 27.5vw;
+        height: 6.7vw;
+        align-content: center;
+        margin: auto;
+        margin-top: 3vw;
+        margin-bottom: 2vw;
+    }
 }
 
 .registration {
@@ -915,6 +928,11 @@ p {
 
 .mt--15 {
     margin-top: -0.75vw;
+    margin-bottom: 20vw;
+
+    @media (max-width: 500px) {
+        margin-bottom: 4vw;
+    }
 }
 
 .mt-15 {
@@ -1240,6 +1258,13 @@ a {
     padding: 1vw;
     text-align: center;
     font-size: 0.6vw;
+
+    @media (max-width: 500px) {
+        padding: 4vw;
+        background-color: transparent;
+        width: 100%;
+        font-size: 4.2vw;
+    }
 }
 
 .modal h2 {
@@ -1257,6 +1282,10 @@ a {
     display: flex;
     justify-content: space-between;
     margin-bottom: 1vw;
+
+    @media (max-width: 500px) {
+        margin-top: 10vw;
+    }
 }
 
 .code-inputs input {
@@ -1266,6 +1295,13 @@ a {
     text-align: center;
     border: 1px solid #ddd;
     border-radius: 0.8vw;
+
+    @media (max-width: 500px) {
+        width: 13.4vw;
+        height: 13.4vw;
+        border-radius: 3.8vw;
+        font-size: 6.2vw;
+    }
 }
 
 .submit-btn {
@@ -1277,6 +1313,13 @@ a {
     border: none;
     border-radius: 0.6vw;
     cursor: pointer;
+
+    @media (max-width: 500px) {
+        height: 12.4vw;
+        border-radius: 3.6vw;
+        font-size: 5.2vw;
+        margin-top: 6vw;
+    }
 }
 
 .back-link {
