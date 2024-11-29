@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Title</title>
+    <link rel="stylesheet" href="/styles.css">
+</head>
+
+<body>
+
+    <body class="reg-page">
+        <header class="header flex content-between">
+            <img class="main_logo" src="/img/main_logo_white.png">
+            <div class="flex items-center gap-20">
+                <img class="icon-box-24" src="../../img/website_white.svg">
+                <img class="icon-box-24" src="../../img/faq.png">
+            </div>
+        </header>
+        <main class="main-content">
+            <section class="section flex content-right">
+                <div class="bx-auth-reg">
+                    <form method="post" action="/auth/registration.php"
+                        class="registration flex flex-column items-start" name="regform" enctype="multipart/form-data">
+                        <h1 class="self-center">Регистрация</h1>
+                        <div class="flex p-5">
+                            <div class="fields boolean" id="main_UF_IS_CORP_BODY">
+                                <div class="fields boolean">
+                                    <input type="hidden" value="0" name="UF_IS_CORP_BODY">
+                                    <label class="checkbox-ios">
+                                        <input id="legal" type="checkbox" value="1" name="UF_IS_CORP_BODY">
+                                        <span class="checkbox-ios-switch"></span>
+                                    </label>
+                                    <label for="legal">Юридическое лицо</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <input size="30" class="with-image person-image " name="REGISTER[NAME]" type="text" value=""
+                                placeholder="Имя">
+                        </div>
+                        <div class="w-100">
+                            <input size="30" class="with-image letter-image " name="REGISTER[EMAIL]" type="text"
+                                value="" placeholder="Email">
+                        </div>
+                        <div class="w-100">
+                            <input size="30" class="with-image case-image " name="REGISTER[WORK_COMPANY]" type="text"
+                                value="" placeholder="Наименование компании">
+                        </div>
+                        <div class="w-100">
+                            <div class="hide w-100">
+                                <input size="30" class="with-image lock-image bx-auth-input" type="password"
+                                    name="REGISTER[PASSWORD]" placeholder="Пароль" value="" autocomplete="off">
+                                <a href="#" class="password-control" onclick="show_hide_password(this);"></a>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="hide w-100">
+                                <input size="30" class="with-image lock-image bx-auth-input" type="password"
+                                    name="REGISTER[CONFIRM_PASSWORD]" placeholder="Подтверждение пароля" value=""
+                                    autocomplete="off">
+                                <a href="#" class="password-control" onclick="show_hide_password(this);"></a>
+                            </div>
+                        </div>
+                        <div class="w-100">
+                            <div class="fields string" id="main_UF_REFERAL">
+                                <div class=" fields string">
+                                    <input type="text" name="UF_REFERAL" value="" size="20"
+                                        class="fields string with-image plus-image bx-auth-input"
+                                        placeholder="Реферальный код">
+                                    <a href="#" class="password-control view" onclick="show_hide_password(this);"></a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex w-100 flex-column">
+                            <input type="submit" name="register_submit_button" value="Продолжить">
+                            <a class="self-center mt-20" href="/">или Войти?</a>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+
+    </body>
+</body>
+
+</html>
