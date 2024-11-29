@@ -999,6 +999,10 @@ p {
 
 .mt-60 {
     margin-top: 3vw;
+
+    @media (max-width: 500px) {
+        margin-top: 20vw;
+    }
 }
 
 .mb-60 {
@@ -1035,6 +1039,10 @@ p {
 
 .grey-color {
     color: #353748;
+
+    @media (max-width: 500px) {
+        margin-top: 4vw;
+    }
 }
 
 .icon-box-24 {
@@ -1248,6 +1256,10 @@ a {
 
 .rotate-image {
     animation: rotate360 1s linear infinite;
+
+    @media (max-width: 500px) {
+        margin-top: 23vw;
+    }
 }
 
 /* Страница подтвердите почту */
